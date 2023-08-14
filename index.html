@@ -5,19 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Calculator</title>
     <style>
-        h1 {
-            color: blue;
+        form {
+            zoom: 2;
+            margin: 0 0% 0 10%;
+        }
+        #equal {
+            background-color: #4d84f1;
+            color: white;
         }
     </style>
 </head>
 <body>
-    <h1>Ali Calculator</h1>
     <form name="calculator">
+        <h1>Ali Calculator</h1>  
         <input type="text" name="display" id="display" readonly>
         <br>
-        <input type="button" value="7" onclick="addToDisplay('7')">
-        <input type="button" value="8" onclick="addToDisplay('8')">
-        <input type="button" value="9" onclick="addToDisplay('9')">
+
+        <input type="button" value="(" onclick="addToDisplay('(')">
+        <input type="button" value=")" onclick="addToDisplay(')')">
+        <input type="button" value="%" onclick="addToDisplay('%')">
+        <input type="button" value="AC" onclick="clearDisplay('AC')">
+        <br>
+        <input type="button" value="1" onclick="addToDisplay('1')">
+        <input type="button" value="2" onclick="addToDisplay('2')">
+        <input type="button" value="3" onclick="addToDisplay('3')">
         <input type="button" value="/" onclick="addToDisplay('/')">
         <br>
         <input type="button" value="4" onclick="addToDisplay('4')">
@@ -25,17 +36,16 @@
         <input type="button" value="6" onclick="addToDisplay('6')">
         <input type="button" value="*" onclick="addToDisplay('*')">
         <br>
-        <input type="button" value="1" onclick="addToDisplay('1')">
-        <input type="button" value="2" onclick="addToDisplay('2')">
-        <input type="button" value="3" onclick="addToDisplay('3')">
+        <input type="button" value="7" onclick="addToDisplay('7')">
+        <input type="button" value="8" onclick="addToDisplay('8')">
+        <input type="button" value="9" onclick="addToDisplay('9')">
         <input type="button" value="-" onclick="addToDisplay('-')">
         <br>
         <input type="button" value="0" onclick="addToDisplay('0')">
         <input type="button" value="." onclick="addToDisplay('.')">
-        <input type="button" value="=" onclick="calculate()">
+        <input type="button" value="=" onclick="calculate()" id="equal">
         <input type="button" value="+" onclick="addToDisplay('+')">
-        <br>
-        <input type="button" value="C" onclick="clearDisplay()">
+        
     </form>
 
     <script>
